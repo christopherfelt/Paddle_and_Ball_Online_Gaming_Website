@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+    Paddle and Ball
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="home_main_text">
+
+    {% if user.is_authenticated %}
+
+        <h1>Welcome Back!</h1>
+        <h2>Play a <a href="{% url 'game:game_play' %}">Game</a>!</h2>
+
+    {% else %}
+
+        <h1 class="home_big_text">Welcome to the Paddle and Ball game website!</h1>
+        <br><br>
+        <h2 class="home_big_text">New Member? </h2><br>
+        <h3 class="home_small_text"><a class="home_anchor" href="{% url 'accounts:signup' %}">Sign up</a> and start playing games!</h3>
+        <br><br>
+        <h2>Already Member? </h2>
+        <h3><a class="home_anchor" href="{% url 'login' %}">Login</a> and start playing games!</h3>
+
+    {% endif %}
+
+
+
+    </div>
+
+
+
+{% endblock %}

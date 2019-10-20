@@ -1,0 +1,19 @@
+body{
+    font-family: 'Squada One', cursive;
+}
+
+.home_main_text{
+    text-align: center;
+}
+
+.home_big_text{
+    display: inline-block;
+}
+
+.home_small_text {
+    display: inline-block;
+}
+
+.home_anchor {
+
+}

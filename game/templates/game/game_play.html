@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+
+    Game Play
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+    <h1>Your Score is Below:</h1>
+
+    <h2 id="number">###</h2>
+
+
+
+    <button id="game_history_button" data-url="{% url 'game:game_history' %}" data-score = "{% url 'game:record_score' %}">Go to Game History</button>
+
+
+{% endblock %}
+
+{% block scripts %}
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="{% static 'game/js/game.js' %}"></script>
+
+{% endblock %}

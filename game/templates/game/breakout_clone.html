@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+
+    <link rel="stylesheet" href="{% static 'game/css/game.css' %}">
+
+{% endblock %}
+
+{% block content %}
+    <body>
+
+    <canvas id="myCanvas" width="480" height="320"></canvas>
+
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <button class="btn btn-primary" id="game_history_button" data-url="{% url 'game:player_history' user.id %}" data-score = "{% url 'game:record_score' %}">Previous Scores</button>
+                <h1 id="score"></h1>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    </body>
+{% endblock %}
+
+{% block scripts %}
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="{% static 'game/js/breakout_clone.js' %}"></script>
+
+{% endblock %}
+
+
+
